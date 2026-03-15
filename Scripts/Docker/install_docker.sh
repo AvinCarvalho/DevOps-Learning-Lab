@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Updating system..."
+echo "Updating system...."
 sudo yum update -y
 
 echo "Set Docker's package repository"
@@ -16,4 +16,4 @@ echo "Enable Docker"
 sudo systemctl enable docker
 
 
-echo "Docker installation completed!"
+echo "Docker installation completed !" 
