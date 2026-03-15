@@ -16,4 +16,4 @@ echo "Enable Docker"
 sudo systemctl enable docker
 
 
-echo "Docker installation completed !" 
+echo "Docker installation completed ! " 
