@@ -8,7 +8,7 @@ sudo yum install -y docker
 sudo systemctl start docker
 sudo systemctl enable docker
 
-echo "===== Enable Kernel Modules ====="
+echo "Enable Kernel Modules"
 sudo modprobe overlay
 sudo modprobe br_netfilter
 
