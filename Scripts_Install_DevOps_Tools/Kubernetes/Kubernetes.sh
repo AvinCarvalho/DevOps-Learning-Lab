@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "===== Updating System ====="
+echo "Updating System"
 sudo yum update -y
 
-echo "===== Install Docker ====="
+echo "Install Docker "
 sudo yum install -y docker
 sudo systemctl start docker
 sudo systemctl enable docker
