@@ -18,7 +18,7 @@ echo "Adding ec2-user to docker group..."
 sudo usermod -aG docker ec2-user
 
 echo "Installing Java..."
-sudo dnf install java-17-amazon-corretto -y
+sudo yum install java-21-amazon-corretto -y
 
 echo "Adding Jenkins repo..."
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
