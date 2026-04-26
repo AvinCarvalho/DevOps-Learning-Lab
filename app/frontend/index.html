@@ -300,7 +300,7 @@
     </div>
 
     <!-- Sign in button -->
-    <button class="btn-login" type="button">Sign in</button>
+   <button class="btn-login" onclick="login()">Sign in</button>
 
     <!-- Divider -->
     <div class="divider">
@@ -336,6 +336,34 @@
     </div>
 
   </div>
+  <script>
+  async function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    try {
+      const res = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, password })
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("Login Success 🚀");
+      } else {
+        alert(data.message);
+      }
+
+    } catch (err) {
+      console.log(err);
+      alert("Error connecting to backend");
+    }
+  }
+</script>
 
 </body>
 </html>
